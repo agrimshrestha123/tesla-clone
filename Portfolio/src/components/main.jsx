@@ -1,8 +1,8 @@
-import Navbar from "./components/Navigation.jsx";
+import Navbar from "./Navigation.jsx";
 
 const main = () => {
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', backgroundColor: '#c7c7c7' }}>
       <Navbar />
     </div>
   );
