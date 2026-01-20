@@ -17,10 +17,10 @@ export default function Navigation() {
      <>
     <div className="flex justify-between items-center p-5 bg-gray-800 text-white" >
       <div>
-        <a href="#" className="text-white font-bold text-decoration none"><CgNametag /> Agrim</a>
+        <a href="#" className="text-white font-bold text-decoration none text-3xl flex"><CgNametag /> Agrim</a>
       </div>
       <div className='space-x-4'>
-        <div className='hidden lg:block space-x-2'>
+        <div className='hidden lg:block space-x-2 '>
           <a href="#" className="cursor-pointer text-decoration text-white font-family Arial, sans-serif hover:bg-gray-500 hover:text-black rounded px-3 py-1" > Skills</a>
         <a href="#" className="cursor-pointer text-decoration text-white font-family Arial, sans-serif hover:bg-gray-500 hover:text-black rounded px-3 py-1" > Projects</a>
         <a href="#" className="cursor-pointer text-decoration text-white font-family Arial, sans-serif hover:bg-gray-500 hover:text-black rounded px-3 py-1" > Testimonials</a>
@@ -35,7 +35,7 @@ export default function Navigation() {
     
     <div className='bg-gray-800'>
       {toggle ? (
-      <div className='flex justify-between nl-10 md:hidden lg:hidden p-5 space-y-3 flex-col '>
+      <div className='flex justify-between nl-10 md:hidden lg:hidden p-5 space-y-3 flex-col transition-all duration-600 ease'>
         <ul>
           <li>
             <a href="#" className="text-decoration text-white font-family Arial, sans-serif hover:bg-gray-500 hover:text-black rounded px-3 py-1" > Skills</a>
@@ -50,7 +50,7 @@ export default function Navigation() {
       </div>
       ) :
       (
-        <div></div>
+        <div className="transition-transform duration-600 ease-in-out"></div>
       )
     }
     </div>
