@@ -1,6 +1,7 @@
 import { BsFacebook, BsTwitter, BsInstagram, BsLinkedin, BsTiktok } from "react-icons/bs"
 import HeroImage from "../assets/hero.jpg"
 
+
 export default function Hero() {
   return (
    <section className="flex bg-gray-800 justify-around items-center p-10 text-white lg:flex-row md:flex-col flex-col xs:flex-col space-y-10 space-x-10" >
@@ -25,11 +26,11 @@ export default function Hero() {
             Show More...
         </button>
          <div className="flex justify-around mt-10  space-x-1 ">
-        <BsFacebook size={30} className="mx-2 hover:text-blue-600 cursor-pointer "/>
-        <BsTwitter size={30} className="mx-2 hover:text-blue-400 cursor-pointer"/>
-        <BsInstagram size={30} className="mx-2 hover:text-pink-600 cursor-pointer"/>
-        <BsLinkedin size={30} className="mx-2 hover:text-blue-700 cursor-pointer"/>
-        <BsTiktok size={30} className="mx-2 hover:text-black cursor-pointer"/> 
+        <BsFacebook size={30} className=" md:mx-2 cursor-pointer md:hover:text-blue-600 "/>
+        <BsTwitter size={30} className="md:mx-2 hover:text-blue-400 cursor-pointer "/>
+        <BsInstagram size={30} className="md:mx-2 hover:text-pink-600 cursor-pointer"/>
+        <BsLinkedin size={30} className="md:mx-2 hover:text-blue-700 cursor-pointer"/>
+        <BsTiktok size={30} className="lg:mx-2 hover:text-black cursor-pointer"/> 
     </div>
     </div>
    
