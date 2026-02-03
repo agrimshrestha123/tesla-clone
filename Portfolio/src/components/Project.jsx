@@ -48,9 +48,45 @@ export default function Project() {
                 </div>
             </div>
             
-            <hr />
-            <div className='grid grid-cols-2 gap-4 p-5'></div>
-            <hr />
+            <hr className='border-white' />
+            <div className='grid grid-cols-2 gap-4 p-5'>
+                <div className='max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl hover:animate-pulse'>
+                    <div className='md:flex '>
+                        <div className='p-8'>
+                            <div className='uppercase tracking-wide text-sm to-indigo-500 font-semibold'>
+                                E-commerce website
+                            </div>
+                            <hr />
+                            <a href="#" className=''>Subheading</a>
+                            <p className='mt-2 text-slate-500'>
+                                Lorem ipsum dolor, sitamet consectetur adipisicing elit. Sapiente tempora, eaque ullam aperiam hic
+                            </p>
+                        </div>
+                        <div className="md:shrink p-15 rounded-full">
+                            <img src={Project1} alt="" width={250} height={250} className='rounded-full'/>
+                        </div>
+                    </div>
+                </div>
+                <div className='max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl hover:animate-pulse'>
+                    <div className='md:flex '>
+                        <div className="md:shrink p-15 rounded-full">
+                            <img src={Project2} alt="" width={250} height={250} className='rounded-full'/>
+                        </div>
+                        <div className='p-8'>
+                            <div className='uppercase tracking-wide text-sm to-indigo-500 font-semibold'>
+                                Tesla clone with PHP
+                            </div>
+                            <hr />
+                            <a href="#" className=''>Subheading</a>
+                            <p className='mt-2 text-slate-500'>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente tempora, eaque ullam aperiam hic
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
         </div>
 
      </div>

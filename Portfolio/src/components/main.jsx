@@ -1,7 +1,7 @@
 import Navbar from "./Navigation.jsx";
 import Hero from "./Hero.jsx";
 import Project from "./Project.jsx";
-import Testimonials from "./Testimonials.jsx";
+import Contact from "./Contact.jsx";
 import Footer from "./Footer.jsx";
 
 const main = () => {
@@ -10,7 +10,7 @@ const main = () => {
       <Navbar />
       <Hero />
       <Project />
-      <Testimonials />
+      <Contact />
       <Footer/>
     </div>
   );
