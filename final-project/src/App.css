@@ -10,6 +10,27 @@ body[data-theme='dark'] {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+body[data-theme='dark'] .card {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+body[data-theme='dark'] .card .text-muted {
+  color: #adb5bd !important;
+}
+
 .container {
   min-height: 80vh;
 }
+
+/* Car Card Animation */
+.car-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.car-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+/* Navbar - Clean and compact */

@@ -1,25 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, Container } from 'react-bootstrap';
 import ThemeToggle from './ThemeToggle';
+import '../styles/Navbar.css';
 
 function NavigationBar({ theme, toggleTheme }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <Navbar bg={theme === 'light' ? 'light' : 'dark'} variant={theme === 'light' ? 'light' : 'dark'} expand="lg">
-      <Container>
-        <Navbar.Brand as={Link} to="/" className='h1'>Tesla Inventory</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/inventory">Inventory</Nav.Link>
-            <Nav.Link as={Link} to="/login">Login</Nav.Link>
-            <Nav.Link as={Link} to="/register">Register</Nav.Link>
-          </Nav>
-          <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <nav className={`navbar-custom ${theme === 'light' ? 'navbar-light' : 'navbar-dark'}`}>
+      <div className="navbar-container">
+        {/* Logo/Brand */}
+        <Link to="/" className="navbar-logo" onClick={closeMenu}>
+टेस्ला
+        </Link>
+
+        {/* Hamburger Icon */}
+        <div className="menu-icon" onClick={toggleMenu}>
+          <div className={isOpen ? 'hamburger open' : 'hamburger'}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        {/* Nav Menu */}
+        <ul className={isOpen ? 'nav-menu active' : 'nav-menu'}>
+          <li className="nav-item">
+            <Link to="/" className="nav-link" onClick={closeMenu}>
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/inventory" className="nav-link" onClick={closeMenu}>
+              Inventory
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/login" className="nav-link" onClick={closeMenu}>
+              Login
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/register" className="nav-link" onClick={closeMenu}>
+              Register
+            </Link>
+          </li>
+          <li className="nav-item">
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 }
 
