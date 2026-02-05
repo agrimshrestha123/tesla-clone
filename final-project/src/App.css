@@ -34,3 +34,178 @@ body[data-theme='dark'] .card .text-muted {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
 }
 /* Navbar - Clean and compact */
+/* Hero Section - Enhanced */
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #ae7ae2 100%);
+  min-height: 600px;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1; /* ADD THIS LINE - brings content to front */
+}
+
+body[data-theme='dark'] .hero-section {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.hero-title {
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+  animation: fadeInUp 1.2s ease-out;
+  font-size: 1.3rem;
+}
+
+/* Hero Button Animation */
+.cta-button {
+  animation: fadeInUp 1.4s ease-out;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Feature Cards - Enhanced */
+.feature-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+body[data-theme='dark'] .feature-card {
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+}
+
+.feature-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3) !important;
+}
+
+.feature-icon {
+  font-size: 4rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.icon-bounce {
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.feature-card:hover .feature-icon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Stats Section - Enhanced */
+.stats-section {
+  background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+  position: relative;
+}
+
+body[data-theme='dark'] .stats-section {
+  background: linear-gradient(to bottom, #1a1a1a, #0d0d0d);
+}
+
+.stat-item {
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: scale(1.1);
+}
+
+.stat-number {
+  color: #667eea;
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item:hover .stat-number {
+  color: #764ba2;
+  transform: scale(1.15);
+}
+
+body[data-theme='dark'] .stats-section .text-muted , body[data-theme='dark'] .container .text-muted {
+  color: #adb5bd !important;
+}
+
+
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+body[data-theme='dark'] .cta-section {
+  background: linear-gradient(135deg, #212529 0%, #1a1a1a 100%);
+}
+
+.pulse-button {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(102, 126, 234, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0); }
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 500px;
+    padding: 80px 0;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+  }
+}

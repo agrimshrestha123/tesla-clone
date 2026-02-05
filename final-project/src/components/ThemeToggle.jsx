@@ -8,7 +8,7 @@ function ThemeToggle({ theme, toggleTheme }) {
       onClick={toggleTheme}
       className="ms-3"
     >
-      {theme === 'light' ? '🌙' : '☀️'}
+      {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
     </Button>
   );
 }

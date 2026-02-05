@@ -8,7 +8,7 @@ export default function Inventory() {
     const [cars] = useState(carsData)
   return (
     <Container className="mt-5">
-      <h1 className="mb-4">Tesla Inventory</h1>
+      <h1 className="mb-4"><span className='fw-bold'>टेस्ला</span> Inventory</h1>
       <p className="lead mb-4">Browse our available vehicles</p>
       
       <Row>

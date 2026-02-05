@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import './App.css';
 
+import CarDetails from './pages/CarDetails';
 function App() {
   // Get theme from localStorage or default to 'light'
   const [theme, setTheme] = useState(() => {
@@ -30,6 +31,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/inventory" element={<Inventory />} />
+         <Route path="/car/:id" element={<CarDetails />} /> 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
