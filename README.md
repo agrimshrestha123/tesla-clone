@@ -31,10 +31,3 @@ View the live version here:
 
 ---
 
-## 📦 Setup
-
-```bash
-git clone https://github.com/yourusername/tesla-inventory.git
-cd tesla-inventory
-npm install
-npm start
