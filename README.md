@@ -6,7 +6,7 @@ A modern React-based web app to browse Tesla vehicles with authentication, theme
 
 ## 🚀 Live Demo
 View the live version here:  
-👉 https://your-live-demo-link.com
+👉 https://teslaclone-pink-theta.vercel.app/
 
 ---
 
